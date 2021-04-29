@@ -1,0 +1,10 @@
+
+node_modules/
+coverage/
+logfile.log
+.DS_Store
+/*.env
+npm-debug.log
+.env
+aVerifier.txt
+config/
