@@ -3,13 +3,14 @@ const Joi = require('joi');
 module.exports = {
 	association: (association) => {
 		const schema = Joi.object({
-			nom: Joi.string().min(3).max(50).required(),
+			nom: Joi.string().min(3).max(255).required(),
 			images: Joi.array(),
 			besoinsId: Joi.array().items(Joi.objectId()),
-			description: Joi.string().max(255).allow(''),
+			description: Joi.string().max(1024).allow(''),
+			adresse: Joi.string().max(255).required(),
 			telephone: Joi.string().min(3).max(50).required(),
-			email: Joi.string().min(5).max(50).required().email(),
-			password: Joi.string().min(5).max(255).required()
+			email: Joi.string().min(5).max(50).email(),
+			usersEmail: Joi.array().items(Joi.string().min(5).max(50).email())
 		});
 		return schema.validate(association);
 	},
@@ -44,5 +45,14 @@ module.exports = {
 			message: Joi.string().max(400).allow('')
 		});
 		return schema.validate(don);
+	},
+	user: (user) => {
+		const schema = Joi.object({
+			nom: Joi.string().min(3).max(50),
+			email: Joi.string().min(5).max(50).required().email(),
+			password: Joi.string().min(3).max(50).required(),
+			isAdmin: Joi.boolean()
+		});
+		return schema.validate(user);
 	}
 };

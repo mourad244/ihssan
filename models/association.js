@@ -17,7 +17,14 @@ const associationSchema = new mongoose.Schema({
 		}
 	],
 	description: {
-		type: Array
+		type: String,
+
+		trim: true,
+		maxlength: 1024
+	},
+	adresse: {
+		type: String,
+		required: true
 	},
 	telephone: {
 		type: String,
@@ -25,29 +32,22 @@ const associationSchema = new mongoose.Schema({
 	},
 	email: {
 		type: String,
-		required: true,
 		minlength: 5,
 		maxlength: 255,
+		sparse: true,
 		unique: true
 	},
-	password: {
-		type: String,
-		required: true,
-		minlength: 5,
-		maxlength: 1024
-	}
-});
-userSchema.methods.generateAuthToken = function () {
-	const token = jwt.sign(
+	usersEmail: [
 		{
-			_id: this._id,
-			nom: this.nom,
-			email: this.email
-		},
-		config.get('jwtPrivateKey')
-	);
-	return token;
-};
+			type: new mongoose.Schema({
+				email: {
+					type: String
+				},
+				nom: String
+			})
+		}
+	]
+});
 
 const Association = mongoose.model('Asssociation', associationSchema);
 
