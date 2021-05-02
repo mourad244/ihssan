@@ -11,4 +11,5 @@ const bienSchema = new mongoose.Schema({
 });
 const Bien = mongoose.model('Bien', bienSchema);
 
+exports.bienSchema = bienSchema;
 exports.Bien = Bien;

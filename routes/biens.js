@@ -1,15 +1,17 @@
 const { Bien } = require('../models/bien');
 const auth = require('../middleware/auth');
+const admin = require('../middleware/admin');
+
 const express = require('express');
 const uploadImages = require('../middleware/uploadImages');
 const validations = require('../startup/validations');
 const router = express.Router();
 
-router.get('/', auth, async (req, res) => {
+router.get('/', async (req, res) => {
 	const biens = await Bien.find().select('-__v');
 	res.send(biens);
 });
-router.get('/:id', auth, async (req, res) => {
+router.get('/:id', async (req, res) => {
 	const bien = await Bien.findById(req.params.id).select('-__v');
 
 	if (!bien) return res.status(404).send("bien avec cette id n'existe pas.");
@@ -17,7 +19,7 @@ router.get('/:id', auth, async (req, res) => {
 	res.send(bien);
 });
 
-router.post('/', async (req, res) => {
+router.post('/', [auth, admin], async (req, res) => {
 	try {
 		await uploadImages(req, res);
 	} catch (error) {
@@ -43,7 +45,7 @@ router.post('/', async (req, res) => {
 
 	res.send(bien);
 });
-router.put('/:id', auth, async (req, res) => {
+router.put('/:id', [auth, admin], async (req, res) => {
 	try {
 		await uploadImages(req, res);
 	} catch (error) {
@@ -77,7 +79,7 @@ router.put('/:id', auth, async (req, res) => {
 	res.send(bien);
 });
 
-router.delete('/:id', auth, async (req, res) => {
+router.delete('/:id', [auth, admin], async (req, res) => {
 	const bien = await Bien.findByIdAndRemove(req.params.id);
 	if (!bien) return res.status(404).send("le bien avec cette id n'existe pas.");
 	if (bien.images) deleteImages(bien.images);

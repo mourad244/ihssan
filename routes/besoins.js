@@ -5,6 +5,7 @@ const logger = require('../startup/logging');
 const role = require('../middleware/role');
 const validateObjectId = require('../middleware/validateObjectId');
 const _ = require('lodash');
+
 const { Association } = require('../models/association');
 const router = express.Router();
 

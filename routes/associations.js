@@ -16,68 +16,63 @@ const validateObjectId = require('../middleware/validateObjectId');
 const router = express.Router();
 
 router.get('/', async (req, res) => {
-	const associations = await Association.find().select('-__v -password').sort('nom');
+	const associations = await Association.find().populate('biensId').select('-__v -password').sort('nom');
 	res.send(associations);
 });
 
-router.post(
-	'/',
-	/* [ auth,admin], */ async (req, res) => {
-		try {
-			await uploadImages(req, res);
-		} catch (err) {
-			res.status(500).send({
-				message: `Could not upload the images: ${req.files.originalname}. ${err}`
-			});
-		}
-		const { error } = validations.association(req.body);
-		if (error) {
-			deleteImages(req.files);
-			return res.status(400).send(error.details[0].message);
-		}
-
-		let association = await Association.findOne({ email: req.body.email });
-		if (association) {
-			deleteImages(req.files);
-			return res.status(400).send('an association a déja cet email.');
-		}
-
-		const { nom, description, adresse, telephone, email, usersEmail } = req.body;
-		const { image: images } = getPathData(req.files);
-
-		const users = await User.find({
-			email: {
-				$in: usersEmail
-			}
+router.post('/', [auth, admin], async (req, res) => {
+	try {
+		await uploadImages(req, res);
+	} catch (err) {
+		res.status(500).send({
+			message: `Could not upload the images: ${req.files.originalname}. ${err}`
 		});
-		if (!users) {
-			deleteImages(req.files);
-			return res
-				.status(404)
-				.send("email donnée pour administrer l'association n'est associé à aucun utilisateur");
-		}
-
-		association = new Association({
-			nom: nom,
-			description: description,
-			adresse: adresse,
-			telephone: telephone,
-			email: email,
-
-			images: images ? images.map((file) => file.path) : []
-		});
-		users.map((e) => {
-			let user = _.pick(e, ['email', 'nom', '_id']);
-			// condtion if the user has already exists in the list
-
-			association.usersEmail.push(user);
-		});
-
-		await association.save();
-
-		res.send(association);
 	}
-);
+	const { error } = validations.association(req.body);
+	if (error) {
+		deleteImages(req.files);
+		return res.status(400).send(error.details[0].message);
+	}
+
+	let association = await Association.findOne({ email: req.body.email });
+	if (association) {
+		deleteImages(req.files);
+		return res.status(400).send('an association a déja cet email.');
+	}
+
+	const { nom, description, adresse, telephone, email, usersEmail } = req.body;
+	const { image: images } = getPathData(req.files);
+
+	const users = await User.find({
+		email: {
+			$in: usersEmail
+		}
+	});
+	if (!users) {
+		deleteImages(req.files);
+		return res.status(404).send("email donnée pour administrer l'association n'est associé à aucun utilisateur");
+	}
+
+	association = new Association({
+		nom: nom,
+		description: description,
+		adresse: adresse,
+		telephone: telephone,
+		email: email,
+
+		images: images ? images.map((file) => file.path) : []
+	});
+	users.map((e) => {
+		let user = _.pick(e, ['email', 'nom', '_id']);
+		// condtion if the user has already exists in the list
+
+		association.usersEmail.push(user);
+	});
+
+	await association.save();
+
+	res.send(association);
+});
 router.put('/:id', [auth, admin], async (req, res) => {
 	try {
 		await uploadImages(req, res);
@@ -129,24 +124,21 @@ router.put('/:id', [auth, admin], async (req, res) => {
 });
 
 router.get('/:id', validateObjectId, async (req, res) => {
-	const result = await Association.findById(req.params.id).select('-__v -password');
+	const result = await Association.findById(req.params.id).populate('biensId').select('-__v -password');
 	// .populate("avis", "-association")
 
 	res.send(result);
 	// let newResult = result.avis;
 });
 
-router.delete(
-	'/:id',
-	/*  auth, */ async (req, res) => {
-		const association = await Association.findByIdAndRemove(req.params.id);
-		if (!association) return res.status(404).send("le association avec cette id n'existe pas.");
-		if (association.images) deleteImages(association.images);
+router.delete('/:id', [auth, admin], async (req, res) => {
+	const association = await Association.findByIdAndRemove(req.params.id);
+	if (!association) return res.status(404).send("le association avec cette id n'existe pas.");
+	if (association.images) deleteImages(association.images);
 
-		res.send(association);
-	}
-);
-router.put('/compte/:id', [auth, role], async (req, res) => {
+	res.send(association);
+});
+router.put('/compte/:associationId', [auth, role], async (req, res) => {
 	try {
 		await uploadImages(req, res);
 	} catch (error) {
@@ -160,16 +152,15 @@ router.put('/compte/:id', [auth, role], async (req, res) => {
 		deleteImages(req.files);
 		return res.status(400).send(error.details[0].message);
 	}
-	const { nom, description, adresse, telephone, email } = req.body;
+	const { nom, description, adresse, telephone } = req.body;
 
 	const association = await Association.findByIdAndUpdate(
-		{ _id: req.params.id },
+		{ _id: req.params.associationId },
 		{
 			nom: nom,
 			description: description,
 			adresse: adresse,
-			telephone: telephone,
-			email: email
+			telephone: telephone
 		},
 		function (err, results) {
 			if (err) {

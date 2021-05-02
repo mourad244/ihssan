@@ -13,7 +13,13 @@ const associationSchema = new mongoose.Schema({
 	biensId: [
 		{
 			type: mongoose.Schema.Types.ObjectId,
-			ref: 'bien'
+			ref: 'Bien'
+		}
+	],
+	donsId: [
+		{
+			type: mongoose.Schema.Types.ObjectId,
+			ref: 'Don'
 		}
 	],
 	description: {

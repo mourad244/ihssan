@@ -27,18 +27,19 @@ module.exports = {
 		});
 		return schema.validate(bien);
 	},
-	donnateur: (donnateur) => {
-		const schema = Joi.object({
-			nom: Joi.string().min(3).max(50).required(),
-			email: Joi.string().min(5).max(50).required().email(),
-			telephone: Joi.string().min(3).max(50).required()
-		});
-		return schema.validate(donnateur);
-	},
+	// donnateur: (donnateur) => {
+	// 	const schema = Joi.object({
+	// 		nom: Joi.string().min(3).max(50).required(),
+	// 		email: Joi.string().min(5).max(50).required().email(),
+	// 		telephone: Joi.string().min(3).max(50).required()
+	// 	});
+	// 	return schema.validate(donnateur);
+	// },
 	don: (don) => {
 		const schema = Joi.object({
-			donnateurId: Joi.objectId().required(),
-			associationId: Joi.objectId().required(),
+			email: Joi.string().min(5).max(50).email(),
+			nom: Joi.string().min(3).max(50),
+			telephone: Joi.string().min(3).max(50),
 			biensId: Joi.array().items(Joi.objectId()),
 			message: Joi.string().max(400).allow('')
 		});

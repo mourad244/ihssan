@@ -6,5 +6,3 @@ logfile.log
 /*.env
 npm-debug.log
 .env
-aVerifier.txt
-config/

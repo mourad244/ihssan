@@ -22,8 +22,18 @@ const schemaDon = new mongoose.Schema({
 		type: Date,
 		required: true,
 		default: Date.now
+	},
+	vu: {
+		type: Boolean,
+		default: false
 	}
 });
+schemaDon.statics.lookup = function (associationId, donId) {
+	return this.findOne({
+		associationId: associationId,
+		_id: donId
+	});
+};
 
 const Don = mongoose.model('Don', schemaDon);
 

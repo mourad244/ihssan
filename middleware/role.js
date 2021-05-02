@@ -6,7 +6,7 @@ module.exports = function (req, res, next) {
 	// 403 Forbidden
 	if (!config.get('requiresAuth')) return next();
 
-	if (!canUpdate(req.user, req.params.id || req.params.associationId)) {
+	if (!canUpdate(req.user, /* req.params.id ||  */ req.params.associationId)) {
 		res.status(403);
 		return res.send('Access denied.');
 	}

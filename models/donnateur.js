@@ -9,14 +9,12 @@ const donnateurSchema = new mongoose.Schema({
 	},
 	email: {
 		type: String,
-		required: true,
 		minlength: 5,
 		maxlength: 50
 	},
 
 	telephone: {
-		type: String,
-		required: true
+		type: String
 	},
 	donsId: [
 		{
