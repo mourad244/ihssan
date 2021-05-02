@@ -5,7 +5,7 @@ module.exports = {
 		const schema = Joi.object({
 			nom: Joi.string().min(3).max(255).required(),
 			images: Joi.array(),
-			besoinsId: Joi.array().items(Joi.objectId()),
+			biensId: Joi.array().items(Joi.objectId()),
 			description: Joi.string().max(1024).allow(''),
 			adresse: Joi.string().max(255).required(),
 			telephone: Joi.string().min(3).max(50).required(),
@@ -16,9 +16,7 @@ module.exports = {
 	},
 	besoin: (besoin) => {
 		const schema = Joi.object({
-			bienId: Joi.objectId().required(),
-			associationId: Joi.objectId().required(),
-			satisfied: Joi.boolean()
+			biensId: Joi.array().items(Joi.objectId())
 		});
 		return schema.validate(besoin);
 	},

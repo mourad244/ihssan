@@ -1,28 +1,17 @@
 const mongoose = require('mongoose');
 
 const schemaBesoin = new mongoose.Schema({
-	bienId: {
-		type: mongoose.Schema.Types.ObjectId,
-		ref: 'Bien',
-		required: true
-	},
+	biensId: [
+		{
+			type: mongoose.Schema.Types.ObjectId,
+			ref: 'Bien'
+		}
+	],
 	associationId: {
 		type: mongoose.Schema.Types.ObjectId,
-		ref: 'Association',
-		required: true
-	},
-	satisfied: {
-		type: Boolean,
-		required: true
+		ref: 'Association'
 	}
 });
-
-schemaBesoin.statics.lookup = function (bienId, associationId) {
-	return this.findOne({
-		bienId: bienId,
-		associationId: associationId
-	});
-};
 
 const Besoin = mongoose.model('Besoin', schemaBesoin);
 

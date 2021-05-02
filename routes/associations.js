@@ -118,7 +118,7 @@ router.put('/:id', [auth, admin], async (req, res) => {
 
 	users.map((e) => {
 		let user = _.pick(e, ['email', 'nom', '_id']);
-		// condtion if the user has already exists in the list
+		// condition if the user has already exists in the list
 		addIfNotExist(association.usersEmail, user);
 	});
 	if (images) association.images.push(...images.map((file) => file.path));
@@ -160,13 +160,12 @@ router.put('/compte/:id', [auth, role], async (req, res) => {
 		deleteImages(req.files);
 		return res.status(400).send(error.details[0].message);
 	}
-	const { nom, besoinsId, description, adresse, telephone, email } = req.body;
+	const { nom, description, adresse, telephone, email } = req.body;
 
 	const association = await Association.findByIdAndUpdate(
 		{ _id: req.params.id },
 		{
 			nom: nom,
-			besoinsId: besoinsId,
 			description: description,
 			adresse: adresse,
 			telephone: telephone,

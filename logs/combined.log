@@ -382,3 +382,140 @@
 {"message":"Connected to MongoDB...","level":"info","timestamp":"2021-05-01 17:36:24"}
 {"message":"Listening on port 3900...","level":"info","timestamp":"2021-05-01 17:40:13"}
 {"message":"Connected to MongoDB...","level":"info","timestamp":"2021-05-01 17:40:15"}
+{"message":"Listening on port 3900...","level":"info","timestamp":"2021-05-01 18:21:19"}
+{"message":"Connected to MongoDB...","level":"info","timestamp":"2021-05-01 18:21:22"}
+{"message":"Listening on port 3900...","level":"info","timestamp":"2021-05-01 18:22:45"}
+{"message":"Connected to MongoDB...","level":"info","timestamp":"2021-05-01 18:22:47"}
+{"message":"Listening on port 3900...","level":"info","timestamp":"2021-05-01 18:39:46"}
+{"message":"Connected to MongoDB...","level":"info","timestamp":"2021-05-01 18:39:48"}
+{"message":"Listening on port 3900...","level":"info","timestamp":"2021-05-01 18:40:29"}
+{"message":"Connected to MongoDB...","level":"info","timestamp":"2021-05-01 18:40:30"}
+{"message":"Listening on port 3900...","level":"info","timestamp":"2021-05-01 18:40:34"}
+{"message":"Connected to MongoDB...","level":"info","timestamp":"2021-05-01 18:40:36"}
+{"message":"Listening on port 3900...","level":"info","timestamp":"2021-05-01 18:42:37"}
+{"message":"Connected to MongoDB...","level":"info","timestamp":"2021-05-01 18:42:39"}
+{"message":"Listening on port 3900...","level":"info","timestamp":"2021-05-01 18:49:07"}
+{"message":"Connected to MongoDB...","level":"info","timestamp":"2021-05-01 18:49:09"}
+{"message":"Listening on port 3900...","level":"info","timestamp":"2021-05-01 18:50:59"}
+{"message":"Connected to MongoDB...","level":"info","timestamp":"2021-05-01 18:51:01"}
+{"message":"Listening on port 3900...","level":"info","timestamp":"2021-05-01 18:52:32"}
+{"message":"Connected to MongoDB...","level":"info","timestamp":"2021-05-01 18:52:34"}
+{"message":"Listening on port 3900...","level":"info","timestamp":"2021-05-01 18:53:29"}
+{"message":"Connected to MongoDB...","level":"info","timestamp":"2021-05-01 18:53:31"}
+{"message":"Listening on port 3900...","level":"info","timestamp":"2021-05-01 18:53:45"}
+{"message":"Connected to MongoDB...","level":"info","timestamp":"2021-05-01 18:53:47"}
+{"message":"Listening on port 3900...","level":"info","timestamp":"2021-05-01 18:54:24"}
+{"message":"Connected to MongoDB...","level":"info","timestamp":"2021-05-01 18:54:26"}
+{"message":"Listening on port 3900...","level":"info","timestamp":"2021-05-01 18:54:33"}
+{"message":"Connected to MongoDB...","level":"info","timestamp":"2021-05-01 18:54:35"}
+{"message":"Listening on port 3900...","level":"info","timestamp":"2021-05-01 18:54:51"}
+{"message":"Connected to MongoDB...","level":"info","timestamp":"2021-05-01 18:54:53"}
+{"message":"Listening on port 3900...","level":"info","timestamp":"2021-05-01 18:55:19"}
+{"message":"Connected to MongoDB...","level":"info","timestamp":"2021-05-01 18:55:21"}
+{"message":"Listening on port 3900...","level":"info","timestamp":"2021-05-01 18:55:41"}
+{"message":"Connected to MongoDB...","level":"info","timestamp":"2021-05-01 18:55:43"}
+{"message":"Listening on port 3900...","level":"info","timestamp":"2021-05-01 18:56:38"}
+{"message":"Connected to MongoDB...","level":"info","timestamp":"2021-05-01 18:56:40"}
+{"message":"Listening on port 3900...","level":"info","timestamp":"2021-05-01 18:57:05"}
+{"message":"Connected to MongoDB...","level":"info","timestamp":"2021-05-01 18:57:07"}
+{"message":"Listening on port 3900...","level":"info","timestamp":"2021-05-01 18:57:10"}
+{"message":"Connected to MongoDB...","level":"info","timestamp":"2021-05-01 18:57:12"}
+{"message":"Listening on port 3900...","level":"info","timestamp":"2021-05-01 18:57:57"}
+{"error":{"errno":-5,"code":"EIO","syscall":"write"},"level":"error","message":"uncaughtException: write EIO\nError: write EIO\n    at afterWriteDispatched (internal/stream_base_commons.js:156:25)\n    at writeGeneric (internal/stream_base_commons.js:147:3)\n    at WriteStream.Socket._writeGeneric (net.js:785:11)\n    at WriteStream.Socket._write (net.js:797:8)\n    at writeOrBuffer (internal/streams/writable.js:358:12)\n    at WriteStream.Writable.write (internal/streams/writable.js:303:10)\n    at Console.log (/home/mourad/git_workspace/ihssan/node_modules/winston/lib/winston/transports/console.js:79:23)\n    at Console._write (/home/mourad/git_workspace/ihssan/node_modules/winston-transport/index.js:103:17)\n    at doWrite (/home/mourad/git_workspace/ihssan/node_modules/readable-stream/lib/_stream_writable.js:428:64)\n    at writeOrBuffer (/home/mourad/git_workspace/ihssan/node_modules/readable-stream/lib/_stream_writable.js:417:5)\n    at Console.Writable.write (/home/mourad/git_workspace/ihssan/node_modules/readable-stream/lib/_stream_writable.js:334:11)\n    at DerivedLogger.ondata (/home/mourad/git_workspace/ihssan/node_modules/winston/node_modules/readable-stream/lib/_stream_readable.js:681:20)\n    at DerivedLogger.emit (events.js:327:22)\n    at addChunk (/home/mourad/git_workspace/ihssan/node_modules/winston/node_modules/readable-stream/lib/_stream_readable.js:298:12)\n    at readableAddChunk (/home/mourad/git_workspace/ihssan/node_modules/winston/node_modules/readable-stream/lib/_stream_readable.js:280:11)\n    at DerivedLogger.Readable.push (/home/mourad/git_workspace/ihssan/node_modules/winston/node_modules/readable-stream/lib/_stream_readable.js:241:10)","stack":"Error: write EIO\n    at afterWriteDispatched (internal/stream_base_commons.js:156:25)\n    at writeGeneric (internal/stream_base_commons.js:147:3)\n    at WriteStream.Socket._writeGeneric (net.js:785:11)\n    at WriteStream.Socket._write (net.js:797:8)\n    at writeOrBuffer (internal/streams/writable.js:358:12)\n    at WriteStream.Writable.write (internal/streams/writable.js:303:10)\n    at Console.log (/home/mourad/git_workspace/ihssan/node_modules/winston/lib/winston/transports/console.js:79:23)\n    at Console._write (/home/mourad/git_workspace/ihssan/node_modules/winston-transport/index.js:103:17)\n    at doWrite (/home/mourad/git_workspace/ihssan/node_modules/readable-stream/lib/_stream_writable.js:428:64)\n    at writeOrBuffer (/home/mourad/git_workspace/ihssan/node_modules/readable-stream/lib/_stream_writable.js:417:5)\n    at Console.Writable.write (/home/mourad/git_workspace/ihssan/node_modules/readable-stream/lib/_stream_writable.js:334:11)\n    at DerivedLogger.ondata (/home/mourad/git_workspace/ihssan/node_modules/winston/node_modules/readable-stream/lib/_stream_readable.js:681:20)\n    at DerivedLogger.emit (events.js:327:22)\n    at addChunk (/home/mourad/git_workspace/ihssan/node_modules/winston/node_modules/readable-stream/lib/_stream_readable.js:298:12)\n    at readableAddChunk (/home/mourad/git_workspace/ihssan/node_modules/winston/node_modules/readable-stream/lib/_stream_readable.js:280:11)\n    at DerivedLogger.Readable.push (/home/mourad/git_workspace/ihssan/node_modules/winston/node_modules/readable-stream/lib/_stream_readable.js:241:10)","exception":true,"date":"Sat May 01 2021 18:57:57 GMT+0000 (GMT)","process":{"pid":1157081,"uid":1000,"gid":1000,"cwd":"/home/mourad/git_workspace/ihssan","execPath":"/home/mourad/.nvm/versions/node/v14.15.4/bin/node","version":"v14.15.4","argv":["/home/mourad/.nvm/versions/node/v14.15.4/bin/node","/home/mourad/git_workspace/ihssan/index.js"],"memoryUsage":{"rss":78761984,"heapTotal":39800832,"heapUsed":28853336,"external":20302900,"arrayBuffers":18784051}},"os":{"loadavg":[1.25,1.46,1.22],"uptime":19260},"trace":[{"column":25,"file":"internal/stream_base_commons.js","function":"afterWriteDispatched","line":156,"method":null,"native":false},{"column":3,"file":"internal/stream_base_commons.js","function":"writeGeneric","line":147,"method":null,"native":false},{"column":11,"file":"net.js","function":"WriteStream.Socket._writeGeneric","line":785,"method":"_writeGeneric","native":false},{"column":8,"file":"net.js","function":"WriteStream.Socket._write","line":797,"method":"_write","native":false},{"column":12,"file":"internal/streams/writable.js","function":"writeOrBuffer","line":358,"method":null,"native":false},{"column":10,"file":"internal/streams/writable.js","function":"WriteStream.Writable.write","line":303,"method":"write","native":false},{"column":23,"file":"/home/mourad/git_workspace/ihssan/node_modules/winston/lib/winston/transports/console.js","function":"Console.log","line":79,"method":"log","native":false},{"column":17,"file":"/home/mourad/git_workspace/ihssan/node_modules/winston-transport/index.js","function":"Console._write","line":103,"method":"_write","native":false},{"column":64,"file":"/home/mourad/git_workspace/ihssan/node_modules/readable-stream/lib/_stream_writable.js","function":"doWrite","line":428,"method":null,"native":false},{"column":5,"file":"/home/mourad/git_workspace/ihssan/node_modules/readable-stream/lib/_stream_writable.js","function":"writeOrBuffer","line":417,"method":null,"native":false},{"column":11,"file":"/home/mourad/git_workspace/ihssan/node_modules/readable-stream/lib/_stream_writable.js","function":"Console.Writable.write","line":334,"method":"write","native":false},{"column":20,"file":"/home/mourad/git_workspace/ihssan/node_modules/winston/node_modules/readable-stream/lib/_stream_readable.js","function":"DerivedLogger.ondata","line":681,"method":"ondata","native":false},{"column":22,"file":"events.js","function":"DerivedLogger.emit","line":327,"method":"emit","native":false},{"column":12,"file":"/home/mourad/git_workspace/ihssan/node_modules/winston/node_modules/readable-stream/lib/_stream_readable.js","function":"addChunk","line":298,"method":null,"native":false},{"column":11,"file":"/home/mourad/git_workspace/ihssan/node_modules/winston/node_modules/readable-stream/lib/_stream_readable.js","function":"readableAddChunk","line":280,"method":null,"native":false},{"column":10,"file":"/home/mourad/git_workspace/ihssan/node_modules/winston/node_modules/readable-stream/lib/_stream_readable.js","function":"DerivedLogger.Readable.push","line":241,"method":"push","native":false}],"timestamp":"2021-05-01 18:57:57"}
+{"message":"Connected to MongoDB...","level":"info","timestamp":"2021-05-01 18:57:59"}
+{"message":"Listening on port 3900...","level":"info","timestamp":"2021-05-01 21:48:10"}
+{"message":"Connected to MongoDB...","level":"info","timestamp":"2021-05-01 21:48:12"}
+{"message":"Listening on port 3900...","level":"info","timestamp":"2021-05-01 22:24:29"}
+{"message":"Connected to MongoDB...","level":"info","timestamp":"2021-05-01 22:24:32"}
+{"message":"Listening on port 3900...","level":"info","timestamp":"2021-05-01 22:26:10"}
+{"message":"Connected to MongoDB...","level":"info","timestamp":"2021-05-01 22:26:13"}
+{"message":"Listening on port 3900...","level":"info","timestamp":"2021-05-01 22:28:54"}
+{"message":"Connected to MongoDB...","level":"info","timestamp":"2021-05-01 22:28:56"}
+{"message":"Listening on port 3900...","level":"info","timestamp":"2021-05-01 22:30:25"}
+{"message":"Connected to MongoDB...","level":"info","timestamp":"2021-05-01 22:30:27"}
+{"message":"Listening on port 3900...","level":"info","timestamp":"2021-05-01 23:17:33"}
+{"message":"Connected to MongoDB...","level":"info","timestamp":"2021-05-01 23:17:35"}
+{"message":"Listening on port 3900...","level":"info","timestamp":"2021-05-01 23:18:11"}
+{"message":"Connected to MongoDB...","level":"info","timestamp":"2021-05-01 23:18:13"}
+{"message":"Listening on port 3900...","level":"info","timestamp":"2021-05-01 23:20:14"}
+{"message":"Listening on port 3900...","level":"info","timestamp":"2021-05-01 23:20:15"}
+{"message":"Connected to MongoDB...","level":"info","timestamp":"2021-05-01 23:20:22"}
+{"message":"Listening on port 3900...","level":"info","timestamp":"2021-05-01 23:20:27"}
+{"message":"Connected to MongoDB...","level":"info","timestamp":"2021-05-01 23:20:29"}
+{"message":"Listening on port 3900...","level":"info","timestamp":"2021-05-01 23:20:35"}
+{"message":"Connected to MongoDB...","level":"info","timestamp":"2021-05-01 23:20:37"}
+{"message":"Listening on port 3900...","level":"info","timestamp":"2021-05-01 23:20:50"}
+{"message":"Connected to MongoDB...","level":"info","timestamp":"2021-05-01 23:20:52"}
+{"message":"Listening on port 3900...","level":"info","timestamp":"2021-05-01 23:31:29"}
+{"message":"Listening on port 3900...","level":"info","timestamp":"2021-05-01 23:31:40"}
+{"message":"Connected to MongoDB...","level":"info","timestamp":"2021-05-01 23:31:48"}
+{"message":"Listening on port 3900...","level":"info","timestamp":"2021-05-01 23:32:13"}
+{"message":"Connected to MongoDB...","level":"info","timestamp":"2021-05-01 23:32:20"}
+{"message":"Listening on port 3900...","level":"info","timestamp":"2021-05-01 23:32:35"}
+{"message":"Connected to MongoDB...","level":"info","timestamp":"2021-05-01 23:32:37"}
+{"message":"Listening on port 3900...","level":"info","timestamp":"2021-05-01 23:36:11"}
+{"message":"Connected to MongoDB...","level":"info","timestamp":"2021-05-01 23:36:19"}
+{"message":"Listening on port 3900...","level":"info","timestamp":"2021-05-01 23:36:31"}
+{"message":"Connected to MongoDB...","level":"info","timestamp":"2021-05-01 23:36:35"}
+{"message":"Listening on port 3900...","level":"info","timestamp":"2021-05-01 23:36:40"}
+{"message":"Connected to MongoDB...","level":"info","timestamp":"2021-05-01 23:36:52"}
+{"message":"Listening on port 3900...","level":"info","timestamp":"2021-05-01 23:40:28"}
+{"message":"Connected to MongoDB...","level":"info","timestamp":"2021-05-01 23:40:30"}
+{"message":"Listening on port 3900...","level":"info","timestamp":"2021-05-01 23:45:28"}
+{"message":"Connected to MongoDB...","level":"info","timestamp":"2021-05-01 23:45:35"}
+{"message":"Listening on port 3900...","level":"info","timestamp":"2021-05-01 23:52:55"}
+{"message":"Connected to MongoDB...","level":"info","timestamp":"2021-05-01 23:52:57"}
+{"message":"Listening on port 3900...","level":"info","timestamp":"2021-05-01 23:53:51"}
+{"message":"Connected to MongoDB...","level":"info","timestamp":"2021-05-01 23:53:54"}
+{"message":"Listening on port 3900...","level":"info","timestamp":"2021-05-01 23:54:30"}
+{"message":"Connected to MongoDB...","level":"info","timestamp":"2021-05-01 23:54:32"}
+{"message":"Listening on port 3900...","level":"info","timestamp":"2021-05-01 23:54:38"}
+{"message":"Connected to MongoDB...","level":"info","timestamp":"2021-05-01 23:54:39"}
+{"message":"Listening on port 3900...","level":"info","timestamp":"2021-05-01 23:54:45"}
+{"message":"Connected to MongoDB...","level":"info","timestamp":"2021-05-01 23:54:46"}
+{"message":"Listening on port 3900...","level":"info","timestamp":"2021-05-01 23:55:15"}
+{"message":"Connected to MongoDB...","level":"info","timestamp":"2021-05-01 23:55:17"}
+{"message":"Listening on port 3900...","level":"info","timestamp":"2021-05-01 23:55:56"}
+{"message":"Connected to MongoDB...","level":"info","timestamp":"2021-05-01 23:56:04"}
+{"message":"Listening on port 3900...","level":"info","timestamp":"2021-05-01 23:57:36"}
+{"message":"Connected to MongoDB...","level":"info","timestamp":"2021-05-01 23:57:44"}
+{"message":"Listening on port 3900...","level":"info","timestamp":"2021-05-01 23:58:22"}
+{"message":"Connected to MongoDB...","level":"info","timestamp":"2021-05-01 23:58:29"}
+{"message":"Listening on port 3900...","level":"info","timestamp":"2021-05-01 23:59:04"}
+{"message":"Connected to MongoDB...","level":"info","timestamp":"2021-05-01 23:59:06"}
+{"message":"Listening on port 3900...","level":"info","timestamp":"2021-05-01 23:59:13"}
+{"message":"Connected to MongoDB...","level":"info","timestamp":"2021-05-01 23:59:15"}
+{"message":"Listening on port 3900...","level":"info","timestamp":"2021-05-01 23:59:33"}
+{"message":"Connected to MongoDB...","level":"info","timestamp":"2021-05-01 23:59:36"}
+{"message":"Listening on port 3900...","level":"info","timestamp":"2021-05-02 00:00:28"}
+{"message":"Connected to MongoDB...","level":"info","timestamp":"2021-05-02 00:00:30"}
+{"message":"Listening on port 3900...","level":"info","timestamp":"2021-05-02 00:01:24"}
+{"message":"Connected to MongoDB...","level":"info","timestamp":"2021-05-02 00:01:34"}
+{"message":"Listening on port 3900...","level":"info","timestamp":"2021-05-02 00:02:40"}
+{"message":"Connected to MongoDB...","level":"info","timestamp":"2021-05-02 00:02:42"}
+{"message":"Listening on port 3900...","level":"info","timestamp":"2021-05-02 00:03:30"}
+{"message":"Connected to MongoDB...","level":"info","timestamp":"2021-05-02 00:03:33"}
+{"message":"Listening on port 3900...","level":"info","timestamp":"2021-05-02 00:07:03"}
+{"message":"Connected to MongoDB...","level":"info","timestamp":"2021-05-02 00:07:06"}
+{"message":"Listening on port 3900...","level":"info","timestamp":"2021-05-02 00:07:17"}
+{"message":"Connected to MongoDB...","level":"info","timestamp":"2021-05-02 00:07:19"}
+{"message":"Listening on port 3900...","level":"info","timestamp":"2021-05-02 00:07:53"}
+{"message":"Connected to MongoDB...","level":"info","timestamp":"2021-05-02 00:07:56"}
+{"message":"Listening on port 3900...","level":"info","timestamp":"2021-05-02 00:09:56"}
+{"message":"Connected to MongoDB...","level":"info","timestamp":"2021-05-02 00:09:58"}
+{"message":"Listening on port 3900...","level":"info","timestamp":"2021-05-02 00:13:15"}
+{"message":"Connected to MongoDB...","level":"info","timestamp":"2021-05-02 00:13:17"}
+{"message":"Listening on port 3900...","level":"info","timestamp":"2021-05-02 00:13:29"}
+{"message":"Connected to MongoDB...","level":"info","timestamp":"2021-05-02 00:13:33"}
+{"message":"Listening on port 3900...","level":"info","timestamp":"2021-05-02 00:13:35"}
+{"message":"Listening on port 3900...","level":"info","timestamp":"2021-05-02 00:13:37"}
+{"message":"Connected to MongoDB...","level":"info","timestamp":"2021-05-02 00:13:40"}
+{"message":"Listening on port 3900...","level":"info","timestamp":"2021-05-02 00:14:35"}
+{"message":"Connected to MongoDB...","level":"info","timestamp":"2021-05-02 00:14:43"}
+{"error":{},"level":"error","message":"uncaughtException: besions is not defined\nReferenceError: besions is not defined\n    at module.exports (/home/mourad/git_workspace/ihssan/startup/routes.js:21:29)\n    at Object.<anonymous> (/home/mourad/git_workspace/ihssan/index.js:10:28)\n    at Module._compile (internal/modules/cjs/loader.js:1063:30)\n    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)\n    at Module.load (internal/modules/cjs/loader.js:928:32)\n    at Function.Module._load (internal/modules/cjs/loader.js:769:14)\n    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)\n    at internal/main/run_main_module.js:17:47","stack":"ReferenceError: besions is not defined\n    at module.exports (/home/mourad/git_workspace/ihssan/startup/routes.js:21:29)\n    at Object.<anonymous> (/home/mourad/git_workspace/ihssan/index.js:10:28)\n    at Module._compile (internal/modules/cjs/loader.js:1063:30)\n    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)\n    at Module.load (internal/modules/cjs/loader.js:928:32)\n    at Function.Module._load (internal/modules/cjs/loader.js:769:14)\n    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)\n    at internal/main/run_main_module.js:17:47","exception":true,"date":"Sun May 02 2021 00:16:17 GMT+0000 (GMT)","process":{"pid":774463,"uid":1000,"gid":1000,"cwd":"/home/mourad/git_workspace/ihssan","execPath":"/home/mourad/.nvm/versions/node/v14.15.4/bin/node","version":"v14.15.4","argv":["/home/mourad/.nvm/versions/node/v14.15.4/bin/node","/home/mourad/git_workspace/ihssan/index.js"],"memoryUsage":{"rss":76165120,"heapTotal":38752256,"heapUsed":27864728,"external":20172722,"arrayBuffers":18672473}},"os":{"loadavg":[1.02,1.13,1.13],"uptime":11608},"trace":[{"column":29,"file":"/home/mourad/git_workspace/ihssan/startup/routes.js","function":"module.exports","line":21,"method":"exports","native":false},{"column":28,"file":"/home/mourad/git_workspace/ihssan/index.js","function":null,"line":10,"method":null,"native":false},{"column":30,"file":"internal/modules/cjs/loader.js","function":"Module._compile","line":1063,"method":"_compile","native":false},{"column":10,"file":"internal/modules/cjs/loader.js","function":"Module._extensions..js","line":1092,"method":".js","native":false},{"column":32,"file":"internal/modules/cjs/loader.js","function":"Module.load","line":928,"method":"load","native":false},{"column":14,"file":"internal/modules/cjs/loader.js","function":"Module._load","line":769,"method":"_load","native":false},{"column":12,"file":"internal/modules/run_main.js","function":"Function.executeUserEntryPoint [as runMain]","line":72,"method":"executeUserEntryPoint [as runMain]","native":false},{"column":47,"file":"internal/main/run_main_module.js","function":null,"line":17,"method":null,"native":false}],"timestamp":"2021-05-02 00:16:17"}
+{"message":"Listening on port 3900...","level":"info","timestamp":"2021-05-02 00:16:26"}
+{"message":"Connected to MongoDB...","level":"info","timestamp":"2021-05-02 00:16:33"}
+{"message":"Listening on port 3900...","level":"info","timestamp":"2021-05-02 00:18:04"}
+{"message":"Connected to MongoDB...","level":"info","timestamp":"2021-05-02 00:18:07"}
+{"message":"Listening on port 3900...","level":"info","timestamp":"2021-05-02 00:18:36"}
+{"message":"Connected to MongoDB...","level":"info","timestamp":"2021-05-02 00:18:44"}

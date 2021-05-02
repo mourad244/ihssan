@@ -10,10 +10,10 @@ const associationSchema = new mongoose.Schema({
 	images: {
 		type: Array
 	},
-	besoinsId: [
+	biensId: [
 		{
 			type: mongoose.Schema.Types.ObjectId,
-			ref: 'Besoin'
+			ref: 'bien'
 		}
 	],
 	description: {
