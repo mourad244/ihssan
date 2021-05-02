@@ -34,14 +34,15 @@ router.post('/', [auth, admin], async (req, res) => {
 		return res.status(400).send(error.details[0].message);
 	}
 
-	let association = await Association.findOne({ email: req.body.email });
+	const { nom, description, adresse, telephone, email, usersEmail } = req.body;
+	const { image: images } = getPathData(req.files);
+
+	let association = await Association.findOne({ email: email != undefined && email });
+
 	if (association) {
 		deleteImages(req.files);
 		return res.status(400).send('an association a déja cet email.');
 	}
-
-	const { nom, description, adresse, telephone, email, usersEmail } = req.body;
-	const { image: images } = getPathData(req.files);
 
 	const users = await User.find({
 		email: {
@@ -59,7 +60,6 @@ router.post('/', [auth, admin], async (req, res) => {
 		adresse: adresse,
 		telephone: telephone,
 		email: email,
-
 		images: images ? images.map((file) => file.path) : []
 	});
 	users.map((e) => {

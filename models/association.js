@@ -24,7 +24,6 @@ const associationSchema = new mongoose.Schema({
 	],
 	description: {
 		type: String,
-
 		trim: true,
 		maxlength: 1024
 	},
@@ -37,11 +36,7 @@ const associationSchema = new mongoose.Schema({
 		required: true
 	},
 	email: {
-		type: String,
-		minlength: 5,
-		maxlength: 255,
-		sparse: true,
-		unique: true
+		type: String
 	},
 	usersEmail: [
 		{

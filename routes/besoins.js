@@ -5,7 +5,7 @@ const logger = require('../startup/logging');
 const role = require('../middleware/role');
 const validateObjectId = require('../middleware/validateObjectId');
 const _ = require('lodash');
-
+const { Bien } = require('../models/bien');
 const { Association } = require('../models/association');
 const router = express.Router();
 
@@ -17,7 +17,15 @@ router.put('/:associationId', [auth, role], async (req, res) => {
 	if (!association) return res.status(404).send("l'association avec cette id n'existe pas.");
 
 	const { biensId } = req.body;
-	association.biensId = biensId;
+	// check if biens are valide
+	const biens = await Bien.find({
+		_id: {
+			$in: biensId
+		}
+	});
+	if (!biens) return res.status(404).send("aucun utilisateur  avec cette email n'est enrgeristé.");
+
+	association.biensId = _.map(biens, _.partialRight(_.pick, '_id'));
 	association.save();
 
 	res.send(association.biensId);
