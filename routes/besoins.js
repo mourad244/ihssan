@@ -23,7 +23,7 @@ router.put('/:associationId', [auth, role], async (req, res) => {
 			$in: biensId
 		}
 	});
-	if (!biens) return res.status(404).send("aucun utilisateur  avec cette email n'est enrgeristé.");
+	if (!biens) return res.status(404).send("aucun bien  avec cette id n'est enrgeristé.");
 
 	association.biensId = _.map(biens, _.partialRight(_.pick, '_id'));
 	association.save();
@@ -31,12 +31,25 @@ router.put('/:associationId', [auth, role], async (req, res) => {
 	res.send(association.biensId);
 });
 
-router.get('/:associationId', validateObjectId, async (req, res) => {
+// liste des besoins d'une association donnée
+
+router.get('/association/:associationId', validateObjectId, async (req, res) => {
 	const association = await Association.findById(req.params.associationId).populate('biensId').select('biensId');
 
 	if (!association) return res.status(404).send("le besoin avec cette id n'existe pas.");
 
 	res.send(association);
+});
+
+// liste des associations d'un bien donné
+router.get('/bien/:bienId', validateObjectId, async (req, res) => {
+	const associations = await Association.find({
+		biensId: {
+			$in: req.params.bienId
+		}
+	});
+	if (!associations) return res.status(404).send("aucune association  avec cette id n'est enrgeristé.");
+	res.send(associations);
 });
 
 module.exports = router;

@@ -7,7 +7,13 @@ const bienSchema = new mongoose.Schema({
 	},
 	images: {
 		type: Array
-	}
+	},
+	associationsId: [
+		{
+			type: mongoose.Schema.Types.ObjectId,
+			ref: 'Association'
+		}
+	]
 });
 const Bien = mongoose.model('Bien', bienSchema);
 
